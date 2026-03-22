@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3a86f5;
+}
+
+/* 添加字体定义 */
+@font-face {
+  font-family: "LXGW WenKai";
+  src: url("../assets/font/LXGWWenKai-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #0d1017;
+  /* font-family: "LXGW WenKai", sans-serif; */
+  font-family: "SimSun", "Songti SC", serif;
+}
+
+.masonry-grid {
+  display: flex;
+  width: auto;
+  margin-left: -16px;
+}
+
+.masonry-grid_column {
+  padding-left: 16px;
+  background-clip: padding-box;
+}
+
+/* 可选：添加响应式间距 */
+@media (max-width: 700px) {
+  .masonry-grid {
+    margin-left: -8px;
+  }
+  .masonry-grid_column {
+    padding-left: 8px;
+  }
+}
+
+/* 隐藏滚动条样式 */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE 和 Edge */
+  scrollbar-width: none; /* Firefox */
+}
